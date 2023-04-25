@@ -3,4 +3,7 @@
 @host=http://localhost:3000
 
 ### Get all tweets
-GET {{baseURL}}/Twitter
+GET {{baseURL}}/Tweets
+
+### Get the tweets of a specific author
+GET {{baseURL}}/Tweets/author

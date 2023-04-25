@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express');
-const router = require('./app/router');
+const tweetRouter = require('./app/tweetRouter');
 
 const app = express();
 
-app.use(router);
+app.use(tweetRouter);
 
 const port = process.env.PORT;
 
