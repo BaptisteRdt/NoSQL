@@ -1,0 +1,62 @@
+@baseURL=http://localhost:3000
+
+@host=http://localhost:3000
+
+#############
+###USER######
+#############
+
+### Signin 
+POST {{baseURL}}/signin
+Content-Type: application/json
+
+{
+    "email": "secondMail@mail.com",
+    "password": "123"
+}
+
+### Login 
+POST {{baseURL}}/login
+Content-Type: application/json
+
+
+{
+    "email": "secondMail@mail.com",
+    "password": "123"
+}
+
+
+#################
+###   Tweet   ###
+#################
+
+### Add Tweet 
+POST {{baseURL}}/Tweet
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0M2U1NzExNDQ2YmIxY2YxNmRkYmNjZCIsImVtYWlsIjoic2Vjb25kTWFpbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJERTaU81T3R6SkpGcjZXQVV0b2pySWV3MzlnSVYudEtWMFBrMmZDeGFjcmhlcTViL0hwZ2ZXIiwiX192IjowfSwiaWF0IjoxNjgyMzI0ODY2LCJleHAiOjE2ODIzMjg0NjZ9.O08xBa9N_acpYALMCyjZoYIxvMLZG8G6ZLtJg0ZpuZk
+
+{
+    "title": "UpdateCache",
+    "content": "content"
+}
+
+### GET all Tweet 
+GET {{baseURL}}/Tweet
+
+### Update article 
+PUT {{baseURL}}/Tweet/643e93432a61aae2fe12bfaf
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0M2U1NzExNDQ2YmIxY2YxNmRkYmNjZCIsImVtYWlsIjoic2Vjb25kTWFpbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJERTaU81T3R6SkpGcjZXQVV0b2pySWV3MzlnSVYudEtWMFBrMmZDeGFjcmhlcTViL0hwZ2ZXIiwiX192IjowfSwiaWF0IjoxNjgxODIyNDAyLCJleHAiOjE2ODE4MjYwMDJ9.PKvH0jeOipemZuEHknirN7_DHU65xTGCVACACpLlkXA
+
+
+{
+    "title": "testTweet10Updated",
+    "content": "content"
+}
+
+### Delete Tweet 
+DELETE {{baseURL}}/Tweet/64463db44379393d859ba6b2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0M2U1NzExNDQ2YmIxY2YxNmRkYmNjZCIsImVtYWlsIjoic2Vjb25kTWFpbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJERTaU81T3R6SkpGcjZXQVV0b2pySWV3MzlnSVYudEtWMFBrMmZDeGFjcmhlcTViL0hwZ2ZXIiwiX192IjowfSwiaWF0IjoxNjgyMzI0ODY2LCJleHAiOjE2ODIzMjg0NjZ9.O08xBa9N_acpYALMCyjZoYIxvMLZG8G6ZLtJg0ZpuZk
+
+### GET BY AUTHOR
+get {{baseURL}}/Tweet/secondMail@mail.com
